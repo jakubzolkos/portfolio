@@ -17,21 +17,25 @@ To get started, you'll need to have `npm` installed on your computer. If you don
 
 To install all the necessary dependencies, run the following command:
 
-'
+```
 npm install react @emailjs/browser tailwindcss
 npx tailwindcss init
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
-'
+```
 
 Once you have installed all the necessary dependencies, you can start the development server by running:
 
+```
 npm start
+```
 
 This will start a local development server and open the portfolio in your default web browser. You can now make changes to the code and see them automatically update in the browser.
 
 To build the production version of the portfolio, run:
 
+```
 npm run build
+```
 
 This will create a `build` folder with the optimized production version of the portfolio.
 
