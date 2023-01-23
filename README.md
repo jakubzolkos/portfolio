@@ -17,9 +17,11 @@ To get started, you'll need to have `npm` installed on your computer. If you don
 
 To install all the necessary dependencies, run the following command:
 
+'
 npm install react @emailjs/browser tailwindcss
 npx tailwindcss init
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+'
 
 Once you have installed all the necessary dependencies, you can start the development server by running:
 
