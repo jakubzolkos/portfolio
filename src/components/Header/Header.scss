@@ -1,0 +1,54 @@
+@import "/src/styles/config.scss";
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.hero_section {
+		@apply px-[420px] min-h-screen flex flex-col items-start justify-center max-w-full mx-auto desktop-lg:px-[30px];
+
+		h5 {
+			@apply text-[20px] mb-[15px] ml-[4px] mobile-lg:mb-[20px];
+
+			color: $monokai;
+			background: none;
+			font-family: "Mukta";
+		}
+
+		h1 {
+			@apply text-[80px] font-extrabold leading-[90px] mobile-lg:text-[40px] mobile-lg:leading-[44px];
+
+			color: $light-slate2;
+			background: none;
+
+			&:nth-child(3) {
+				@apply leading-[72px] mt-[5px] mobile-lg:leading-[36px];
+
+				color: $monokai;
+			}
+		}
+
+		p {
+			@apply my-[20px] max-w-[540px] text-[20px] leading-[26px] mobile-lg:text-[18px] mobile-lg:leading-[23px];
+
+			background: none;
+			span {
+				color: $green;
+			}
+		}
+
+		.button {
+			button {
+				@apply rounded-sm mt-[20px] border py-4 px-5 text-[15px] leading-[18px];
+
+				font-family: "Mukta";
+				transition: $delay;
+				font-size: larger;
+
+				&:hover {
+					background: rgba($monokai, 0.3);
+				}
+			}
+		}
+	}
+}

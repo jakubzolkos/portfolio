@@ -1,0 +1,115 @@
+@import "/src/styles/config.scss";
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.about {
+		@apply bg-none h-screen max-w-full py-[330px] mx-auto flex items-center justify-center desktop-lg:px-[30px];
+
+		.about_container {
+			@apply bg-none w-full max-w-[1000px];
+
+			h2 {
+				@apply bg-none flex items-center justify-center relative mt-[10px] mb-[80px] whitespace-nowrap w-full font-semibold text-[38px] leading-[35px] mobile-lg:text-[26px] mobile-lg:leading-[29px];
+
+				color: $light-slate2;
+
+				&::before {
+					@apply bg-none mr-4 content-[""] block relative  w-[500px] h-[1px] ml-[20px] tablet-lg:w-full tablet-sm:ml-[10px];
+
+					background-color: $light-navy2;
+				}
+
+				&::after {
+					@apply content-[""] block relative  w-[500px] h-[1px] ml-[20px] tablet-lg:w-full tablet-sm:ml-[10px];
+
+					background-color: $light-navy2;
+				}
+			}
+
+			.inner {
+				@apply bg-none grid gap-[50px] tablet-lg:block;
+
+				grid-template-columns: 3fr 2fr;
+
+				.about_text {
+					p {
+						@apply bg-none text-[20px] font-normal leading-[26px] mb-[15px] mobile-lg:text-[18px] mobile-lg:leading-[23px];
+
+						a {
+							color: $monokai;
+							background: none
+						}
+					}
+
+				
+					button {
+						@apply rounded-sm mt-[30px] border py-3 px-4 text-[15px] leading-[18px];
+		
+						font-family: "Mukta";
+						transition: $delay;
+						font-size: larger;
+
+						&:hover {
+							background: rgba($monokai, 0.3);
+						}
+					}
+					
+
+					.skill-list {
+						@apply bg-none grid gap-[10px] mt-[20px];
+
+						grid-template-columns: repeat(2, minmax(140px, 200px));
+
+						li {
+							@apply relative mb-[5px] pl-[20px] text-[13px];
+
+							font-family: "SFMono";
+
+							&::before {
+								@apply bg-none content-["▹"] absolute left-0 top-[2px] text-[14px] leading-[12px];
+
+								color: $monokai;
+							}
+						}
+					}
+				}
+
+				.about_pic {
+					@apply ml-[60px] bg-none tablet-lg:w-[70%] tablet-lg:hidden tablet-lg:mt-[50px];
+
+					.wrapper {
+						@apply w-[300px] h-[300px] rounded relative mobile-lg:w-full mobile-lg:h-full;
+
+						
+						transition: $delay;
+
+						// img {
+						// 	mix-blend-mode: multiply;
+						// }
+
+						&:hover {
+							img {
+								mix-blend-mode: normal;
+							}
+						}
+
+						&::before {
+							@apply content-[""] absolute block w-full h-full border-2 top-5 left-5 rounded;
+
+							background: $darkgray;
+							border-color: $monokai;
+							transition: $delay;
+							z-index: -1;
+						}
+
+						&:hover::before {
+							@apply top-4 left-4;
+						}
+					}
+				}
+			}
+		}
+	}
+}

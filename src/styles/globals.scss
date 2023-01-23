@@ -1,0 +1,63 @@
+@import './config.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;400&display=swap');
+
+@layer base {
+	* {
+		box-sizing: border-box;
+		font-family: 'Mukta';
+		background: url('/home/hyron/Desktop/UNI/CODING/portfolio/src/assets/bgr.gif') fixed center;
+		background-image: url('/home/hyron/Desktop/UNI/CODING/portfolio/src/assets/bgr.gif');
+		background-attachment: fixed;
+		background-position: center;
+		background-blend-mode: normal;
+		
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		color: $slate;
+		line-height: 1.3;
+	}
+
+	::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: $darkgray;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: $dark-slate;
+		border: 3px solid $navy;
+		border-radius: 10px;
+	}
+}
+
+@layer components {
+	#root {
+		position: relative;
+
+		& > .loading-container {
+			@apply absolute top-0 left-0 w-full h-screen z-[10000000] flex items-center justify-center;
+
+			svg {
+				@apply w-32 h-32;
+			}
+		}
+	}
+
+	main {
+		@apply mobile-lg:px-[25px] px-[150px];
+	}
+
+	section {
+		@apply mobile-lg:py-[60px];
+	}
+}

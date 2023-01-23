@@ -1,0 +1,152 @@
+@import "/src/styles/config.scss";
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;400&display=swap');
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.navbar {
+		@apply fixed top-0 w-full h-[100px] px-[50px] flex items-center justify-between mobile-lg:px-[30px];
+
+		transition: $delay;
+
+		.left {
+
+			a {
+				transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+				&:hover {
+					// transition: $delay;
+					filter: brightness(1.3);
+					transition-duration: 0.25s;
+				}
+			}
+
+			img {
+				@apply w-16 h-16;
+			}
+		}
+
+		.right {
+			@apply flex items-center mobile-lg:hidden;
+
+			ul {
+				@apply bg-none flex justify-between items-center;
+
+				li {
+					a {
+						@apply bg-none px-[10px] mx-[5px] text-[13px] cursor-pointer;
+
+						color: $light-slate2;
+						font-family: "Mukta";
+						transition: $delay;
+						font-size: large;
+						background: none;
+
+						span {
+							@apply bg-none font-medium tracking-wide mr-[5px] text-[12px];
+
+							color: $monokai;
+							font-family: "SFMono";
+						}
+
+						&:hover {
+							color: $monokai;
+						}
+					}
+				}
+			}
+
+			.resume {
+				a {
+					@apply text-[13px] py-[0.7rem] px-4 ml-[15px] border rounded;
+
+					color: $monokai;
+					border-color: $monokai;
+					font-family: "SFMono";
+					transition: $delay;
+
+					&:hover {
+						background: rgba($monokai, 0.1);
+					}
+				}
+			}
+		}
+
+		.mobile-nav {
+			@apply hidden mobile-lg:block;
+		}
+
+		&.active {
+			@apply h-[70px] mt-0 shadow-xl overflow-hidden;
+
+			background: rgba($navbar, 0.85);
+			backdrop-filter: blur(10px);
+			z-index: 100000;
+			transition: $delay;
+		}
+
+		&.hide {
+			@apply -mt-28;
+		}
+	}
+
+	.mobile-navbar {
+		@apply fixed top-0 right-0 min-h-screen z-[1000000000000000000] w-full max-w-0 flex flex-col items-center justify-center overflow-hidden;
+
+		background: $navbar;
+		transition: $delay;
+
+		ul {
+			@apply flex flex-col items-center justify-center;
+
+			li {
+				a {
+					@apply block px-[10px] py-2 my-2 text-[14px] leading-[18px] cursor-pointer text-center;
+
+					color: $light-slate2;
+					font-family: "Mukta";
+					transition: $delay;
+
+					span {
+						@apply block font-medium tracking-wide text-[14px];
+
+						color: $monokai;
+						font-family: "Mukta";
+					}
+
+					&:hover {
+						color: $monokai;
+					}
+				}
+			}
+		}
+
+		.resume {
+			@apply w-[150px] text-center;
+
+			a {
+				@apply inline-block w-full text-[14px] py-[0.8rem] px-4 mt-10 border rounded;
+
+				color: $monokai;
+				border-color: $monokai;
+				font-family: "SFMono";
+				transition: $delay;
+
+				&:hover {
+					background: rgba($monokai, 0.1);
+				}
+			}
+		}
+
+		.close-menu {
+			@apply w-[30px] h-[30px] absolute top-5 right-5;
+
+			svg {
+				@apply w-full h-full;
+			}
+		}
+
+		&.active {
+			@apply max-w-[240px];
+		}
+	}
+}

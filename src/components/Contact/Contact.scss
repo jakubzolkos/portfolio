@@ -1,0 +1,114 @@
+@import "/src/styles/config.scss";
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.contact {
+		@apply mb-[50px] py-[100px] flex flex-col items-center justify-center tablet-lg:mb-[50px] mobile-lg:py-[60px] desktop-lg:px-[30px];
+
+		@media screen and (max-width: 768px) {
+			grid-column: 1/-1;
+		}
+
+		box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+		grid-area: 1 / 6 / -1 / -1;
+		transition: $delay;
+		z-index: 1;
+
+		button {
+						@apply rounded-sm mt-[30px] border py-3 px-4 text-[15px] leading-[18px];
+		
+						font-family: "Mukta";
+						transition: $delay;
+						font-size: larger;
+						
+						&:hover {
+							background: rgba($monokai, 0.3);
+						}
+					}
+
+		.container {
+			@apply flex flex-col items-center justify-center;
+
+			h2 {
+				@apply bg-none flex items-center justify-center relative mt-[10px] mb-[40px] whitespace-nowrap w-full font-semibold text-[45px] leading-[35px] mobile-lg:text-[26px] mobile-lg:leading-[29px];
+
+				color: $light-slate2;
+
+				&::before {
+					@apply bg-none mr-4 content-[""] block relative  w-[500px] h-[1px] ml-[20px] tablet-lg:w-full tablet-sm:ml-[10px];
+
+					background-color: $light-navy2;
+				}
+
+				&::after {
+					@apply content-[""] block relative  w-[500px] h-[1px] ml-[20px] tablet-lg:w-full tablet-sm:ml-[10px];
+
+					background-color: $light-navy2;
+				}
+			}
+
+			.contact_inner {
+				@apply flex flex-col items-center justify-center text-center;
+
+				.numbered_heading {
+					@apply block mb-5 text-[16px] leading-[18px];
+
+					color: $green;
+					font-family: "SFMono";
+
+					&::before {
+						@apply mr-[10px] relative text-[14px];
+					}
+				}
+
+				.title {
+					@apply text-[60px] leading-[66px] font-semibold mb-[10px] tablet-lg:text-[40px] tablet-lg:leading-[44px];
+
+					color: $light-slate2;
+				}
+
+				p {
+					@apply text-[20px] leading-[26px] mobile-lg:text-[18px] mobile-lg:leading-[23px];
+				}
+
+				
+
+				.email_link {
+					@apply inline-block py-5 px-7 mt-[50px] cursor-pointer text-[14px] leading-[14px] border rounded;
+
+					color: $green;
+					border-color: $green;
+					font-family: "SFMono";
+					transition: $delay;
+
+					&:hover {
+						background: rgba($green, 0.1);
+					}
+				}
+			}
+		}
+	}
+
+	.footer {
+		@apply h-[70px] text-[12px] leading-[12px] text-center;
+
+	
+		.social-links {
+			@apply flex tablet-lg:flex justify-between items-center max-w-[250px] mx-auto;
+
+			a {
+				@apply p-[10px];
+
+				svg {
+					@apply w-5 h-5;
+				}
+
+				&:hover {
+					color: $green;
+				}
+			}
+		}
+	}
+}

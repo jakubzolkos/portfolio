@@ -1,0 +1,39 @@
+@import "/src/styles/config.scss";
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .footer {
+		@apply bg-none h-[80px] text-[12px] leading-[12px] text-center;
+
+		color: $light-slate1;
+
+		* {
+			font-family: "SFMono";
+		}
+
+		.social-links {
+			@apply bg-none flex tablet-lg:flex justify-between items-center max-w-[250px] h-[70px];
+
+			li {
+				background: none
+			}
+
+			a {
+				@apply bg-none p-[10px];
+				transition: 0.2s;
+
+				svg {
+					@apply bg-none w-5 h-5;
+				}
+
+				&:hover {
+					color: $monokai;
+					transition: $delay;
+				}
+			}
+		}
+	}
+}
