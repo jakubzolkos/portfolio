@@ -1,6 +1,6 @@
 <h1 align="center">Portfolio 1.0</h1>
 <p align="center">
-  <img src="https://via.placeholder.com/150" alt="Portfolio" />
+  <img src="[https://via.placeholder.com/150](https://github.com/jakubzolkos/portfolio/blob/main/public/images/readme_bg.png)" alt="Portfolio" />
 </p>
 
 ---
