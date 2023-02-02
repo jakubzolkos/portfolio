@@ -42,6 +42,10 @@
 
 							.project_desc {
 								@apply bg-none tablet-lg:bg-transparent tablet-lg:shadow-none;
+
+								.odd_links {
+									@apply tablet-lg:justify-start
+								}
 							}
 
 							.project_techs {

@@ -5,13 +5,13 @@
 
 @layer components {
 	.about {
-		@apply bg-none h-screen max-w-full py-[330px] mx-auto flex items-center justify-center desktop-lg:px-[30px];
+		@apply bg-none items-center justify-center mx-auto desktop-lg:px-[30px];
 
 		.about_container {
-			@apply bg-none w-full max-w-[1000px];
+			@apply bg-none;
 
 			h2 {
-				@apply bg-none flex items-center justify-center relative mt-[10px] mb-[80px] whitespace-nowrap w-full font-semibold text-[38px] leading-[35px] mobile-lg:text-[26px] mobile-lg:leading-[29px];
+				@apply bg-none flex items-center justify-center relative mb-[80px] whitespace-nowrap w-full font-semibold text-[38px] leading-[35px] mobile-lg:text-[26px] mobile-lg:leading-[29px];
 
 				color: $light-slate2;
 
@@ -29,7 +29,7 @@
 			}
 
 			.inner {
-				@apply bg-none grid gap-[50px] tablet-lg:block;
+				@apply bg-none gap-[50px] flex tablet-lg:block text-left desktop-md:text-center;
 
 				grid-template-columns: 3fr 2fr;
 
@@ -77,17 +77,13 @@
 				}
 
 				.about_pic {
-					@apply ml-[60px] bg-none tablet-lg:w-[70%] tablet-lg:hidden tablet-lg:mt-[50px];
+					@apply mb-[180px] ml-[60px] bg-none tablet-lg:w-[70%] desktop-md:hidden flex justify-center items-center;
 
 					.wrapper {
 						@apply w-[300px] h-[300px] rounded relative mobile-lg:w-full mobile-lg:h-full;
 
 						
 						transition: $delay;
-
-						// img {
-						// 	mix-blend-mode: multiply;
-						// }
 
 						&:hover {
 							img {
