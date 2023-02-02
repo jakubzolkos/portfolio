@@ -41,6 +41,21 @@ const GithubIcon = () => {
 	);
 };
 
+const PopUp = () => {
+	return (
+		<div>
+		  <button onClick={() => this.setState({ showVideo: true })}>
+			Show Video
+		  </button>
+		  {this.state.showVideo ? (
+			<div className="fixed top-0 left-0 w-full h-full bg-black">
+			  <video src={videoUrl} />
+			</div>
+		  ) : null}
+		</div>
+	  );
+}
+
 
 const Work = () => {
 	return (
@@ -70,7 +85,7 @@ const Work = () => {
 										Partying on a Friday night? DrunkAPI is a web app where artifficial intelligence checks whether you are sober or had
 										a little to many drinks, solely based on the voice in the uploaded recording. 
 									</p>
-									<div className="flex justify-end  bg-none">
+									<div className="odd_links flex justify-end bg-none">
 									<a href="" target="_blank" className="text-white bg-[#F92672] border-[#F92672]">
 										DEMO
 										<ExternalIcon/>
@@ -164,12 +179,12 @@ const Work = () => {
 									<p className="bg-none">
 										The first iteration of my personal portfolio. Inspired by Brittany Chiang's work. 
 									</p>
-									<div className="flex justify-end bg-none">
+									<div className="odd_links flex justify-end bg-none">
 									<a href="" target="_blank" className="text-white bg-[#F92672] border-[#F92672]">
 										DEMO
 										<ExternalIcon/>
 									</a>
-									<a href="" target="_blank" className="ml-3 text-white">
+									<a href="https://github.com/jakubzolkos/portfolio" target="_blank" className="ml-3 text-white">
 										CODE
 										<GithubIcon />
 									</a>

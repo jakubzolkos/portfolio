@@ -5,7 +5,7 @@
 
 @layer components {
 	.contact {
-		@apply mb-[50px] py-[100px] flex flex-col items-center justify-center tablet-lg:mb-[50px] mobile-lg:py-[60px] desktop-lg:px-[30px];
+		@apply mb-[50px] py-[100px] flex-col items-center justify-center tablet-lg:mb-[50px] mobile-lg:py-[60px] desktop-lg:px-[30px];
 
 		@media screen and (max-width: 768px) {
 			grid-column: 1/-1;
@@ -47,47 +47,7 @@
 
 					background-color: $light-navy2;
 				}
-			}
-
-			.contact_inner {
-				@apply flex flex-col items-center justify-center text-center;
-
-				.numbered_heading {
-					@apply block mb-5 text-[16px] leading-[18px];
-
-					color: $green;
-					font-family: "SFMono";
-
-					&::before {
-						@apply mr-[10px] relative text-[14px];
-					}
-				}
-
-				.title {
-					@apply text-[60px] leading-[66px] font-semibold mb-[10px] tablet-lg:text-[40px] tablet-lg:leading-[44px];
-
-					color: $light-slate2;
-				}
-
-				p {
-					@apply text-[20px] leading-[26px] mobile-lg:text-[18px] mobile-lg:leading-[23px];
-				}
-
-				
-
-				.email_link {
-					@apply inline-block py-5 px-7 mt-[50px] cursor-pointer text-[14px] leading-[14px] border rounded;
-
-					color: $green;
-					border-color: $green;
-					font-family: "SFMono";
-					transition: $delay;
-
-					&:hover {
-						background: rgba($green, 0.1);
-					}
-				}
-			}
+			}			
 		}
 	}
 
@@ -96,7 +56,7 @@
 
 	
 		.social-links {
-			@apply flex tablet-lg:flex justify-between items-center max-w-[250px] mx-auto;
+			@apply flex justify-between items-center max-w-[250px] mx-auto;
 
 			a {
 				@apply p-[10px];

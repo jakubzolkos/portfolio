@@ -10,11 +10,16 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@ap.cx/react-fullpage": "^0.3.0",
 		"@emailjs/browser": "^3.10.0",
 		"animejs": "^3.2.1",
+		"axios": "^1.2.3",
 		"emailjs-com": "^3.2.0",
+		"file-saver": "^2.0.5",
+		"js-file-download": "^0.4.12",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-download-link": "^2.3.0",
 		"semantic-ui-css": "^2.5.0",
 		"semantic-ui-react": "^2.1.4",
 		"sweetalert2": "^11.7.0"

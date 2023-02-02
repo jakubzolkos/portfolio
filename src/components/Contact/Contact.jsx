@@ -36,29 +36,27 @@ const Contact = () => {
 
 	return (
 		<>
-			<section className="contact h-[800px] mt-[40px]" id="contact">
+			<section className="contact h-[800px] flex justify-center items-center" id="contact">
 				<div data-aos="fade-up" data-aos-duration="700" className="container bg-none">
 					<h2>
 						Contact
 					</h2>
-					<p className="text-4xl bg-none"> Let's stay in touch!</p>
-					<p className="text-2xl mb-4 bg-none"> Submit the form below or send me an email at zolkos@bu.edu</p>
-					<div name = 'contact' className = 'bg-none w-full flex flex-col items-center justify-center mx-auto px-[100px] border-gray-300'>	
-						<form ref = {form} onSubmit = {sendEmail} className = 'grid grid-cols-2 max-w-[1000px] max-h-[500px] w-full rounded-lg bg-opacity-60 px-5 py-5 bg-none bg-[#16171d]'>
-						<div className='bg-opacity-60 bg-none'>
-								<Map/>
-							</div>
-							
+					<div className='bg-none'>
+					<p className="text-4xl bg-none justify-center flex text-center"> Let's stay in touch!</p>
+					<p className="text-2xl mb-4 bg-none justify-center flex text-center"> Submit the form below or send me an email at zolkos@bu.edu</p>
+
+					</div>
+						<div name = 'contact' className = 'bg-none max-w-[800px] mx-auto border-gray-300'>	
+						<form ref = {form} onSubmit = {sendEmail} className = 'max-h-[500px] w-full rounded-lg bg-opacity-60 px-5 py-5 bg-none bg-[#16171d]'>		
 							<div className = 'pb-8 bg-none'>
-            		
-            				<div className='bg-opacity-60 mt-7 grid grid-cols-2 bg-none'>
-              					<input className = 'bg-opacity-60 text-xl bg-none outline-none text-gray-300 inline border-b-2 p-2 mr-6' type = 'text' placeholder = 'First Name' name = 'user_first_name'/>
-             					<input className = 'bg-opacity-60 text-xl bg-none  items-stretch outline-none text-gray-300 inline border-b-2 py-2' type = 'text' placeholder = 'Last Name' name = 'user_last_name'/>
+            				<div className='bg-opacity-60 mt-7 grid mobile-lg:flex-col mobile-lg:grid-cols-1 grid-cols-2 gap-6 bg-none'>
+								<input className = 'bg-opacity-60 text-xl bg-none outline-none text-gray-300 inline border-b-2 px-2 py-2 mobile-lg:mb-2' type = 'text' placeholder = 'Name' name = 'user_name'/>
+             					<input className = 'bg-opacity-60 text-xl bg-none items-stretch outline-none text-gray-300 inline border-b-2 px-2 py-2' type = 'text' placeholder = 'Phone (Optional)' name = 'user_phone'/>
 							</div>
-							<input required className = 'bg-opacity-60 w-full text-xl bg-none outline-none text-gray-300 inline border-b-2 my-4 p-2' type = 'email' placeholder = 'Email' name = 'user_email'/>
-							<textarea required className = 'bg-opacity-70 w-full text-xl max-h-[200px] bg-none outline-none text-gray-300 inline border-b-2  p-2' name = 'message' rows="10" placeholder = 'Message'></textarea>
+							<input required className = 'bg-opacity-60 w-full text-xl bg-none outline-none text-gray-300 inline border-b-2 my-4 py-2 px-2' type = 'email' placeholder = 'Email' name = 'user_email'/>
+							<textarea required className = 'bg-opacity-70 w-full text-xl max-h-[200px] bg-none outline-none text-gray-300 inline border-b-2  p-2' name = 'message' rows="50" placeholder = 'Message'></textarea>
 						
-							<div className="justify-end flex">
+							<div className="flex bg-none justify-center">
 							<button type = "submit" value = "Send" className = 'mt-5 text-white border-2 hover:bg-pink-600 hover:border-pink-600 w-[150px] py-3 my-8'>Submit</button>
 							</div>
 							
