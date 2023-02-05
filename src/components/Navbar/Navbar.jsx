@@ -1,6 +1,7 @@
 import React from "react";
 import useScroll from "../../hooks/useScroll";
 import "./Navbar.scss";
+import resume from "../../assets/jakub_zolkos_resume.pdf"
 
 const Navbar = () => {
 	const { scrollY, scrollDirection } = useScroll();
@@ -23,14 +24,14 @@ const Navbar = () => {
 					data-aos="zoom-in"
 					data-aos-duration="700"
 				>
-					<a href=""><img className = "bg-none" src="/logo.svg" alt=""/></a>
+					<a href="#header"><img className = "bg-none" src="/logo.svg" alt=""/></a>
 				</div>
 
 				<div className="right bg-none">
 					<ul className="bg-none">
 						<li data-aos="fade-down" data-aos-duration="700" className="bg-none">
-							<a href="#about">
-								<span></span>{"<"}about{"/>"}
+							<a href="#header">
+								<span></span>{"<"}home{"/>"}
 							</a>
 						</li>
 						<li
@@ -39,8 +40,8 @@ const Navbar = () => {
 							data-aos-duration="700"
 							className="bg-none"
 						>
-							<a href="#experience">
-								<span></span>{"<"}skills{"/>"}
+							<a href="#about">
+								<span></span>{"<"}about{"/>"}
 							</a>
 						</li>
 						<li
@@ -65,14 +66,14 @@ const Navbar = () => {
 						</li>
 					</ul>
 
-					{/* <div
-						className="resume"
+					<div
+						className="resume tablet-lg:hidden"
 						data-aos="fade-down"
 						data-aos-delay="700"
 						data-aos-duration="700"
 					>
-						<a href="/">Resume</a>
-					</div> */}
+						<a href={resume} target="_blank" without rel="noopener noreferrer">Resume</a>
+					</div>
 				</div>
 
 				<div className="mobile-nav">
@@ -102,24 +103,24 @@ const Navbar = () => {
 			<aside
 				className={mobileNav ? "mobile-navbar active" : "mobile-navbar"}
 			>
-				<ul>
-					<li>
-						<a href="#about">
+				<ul className="bg-none">
+					<li className="bg-none">
+						<a className='bg-none' href="#header">
+							<span></span>Home
+						</a>
+					</li>
+					<li className="bg-none">
+						<a className='bg-none' href="#about">
 							<span></span>About
 						</a>
 					</li>
-					<li>
-						<a href="#experience">
-							<span></span>Experience
-						</a>
-					</li>
-					<li>
-						<a href="#work">
+					<li className="bg-none">
+						<a className='bg-none' href="#work">
 							<span></span>Work
 						</a>
 					</li>
-					<li>
-						<a href="#contact">
+					<li className="bg-none">
+						<a className='bg-none' href="#contact">
 							<span></span>Contact
 						</a>
 					</li>

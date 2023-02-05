@@ -5,7 +5,7 @@
 
 @layer components {
 	.contact {
-		@apply mb-[50px] py-[100px] flex-col items-center justify-center tablet-lg:mb-[50px] mobile-lg:py-[60px] desktop-lg:px-[30px];
+		@apply mb-[50px] py-[150px] flex-col items-center justify-center tablet-lg:mb-[50px] mobile-lg:py-[60px] desktop-lg:px-[30px];
 
 		@media screen and (max-width: 768px) {
 			grid-column: 1/-1;

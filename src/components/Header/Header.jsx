@@ -3,7 +3,7 @@ import "./Header.scss";
 
 const Header = () => {
 	return (
-		<header className="hero_section">
+		<header className="hero_section" id="header">
 			<h5 data-aos="fade-up" data-aos-delay="800" data-aos-duration="700">
 				Hello there! My name is
 			</h5>
@@ -26,8 +26,8 @@ const Header = () => {
 				data-aos-delay="1200"
 				data-aos-duration="700"
 			>
-				<a href='#work' className="bg-none"><button className = 'mr-5 text-white bg-[#F92672] border-[#F92672]'>See My Work! </button></a>
-				<a href='#contact'className="bg-none"><button className = 'text-white'>Contact Me</button></a>
+				<a href='#work' className="bg-none"><button className = 'mr-5 text-white bg-[#F92672] border-[#F92672]'>SEE MY WORK! </button></a>
+				<a href='#contact'className="bg-none"><button className = 'text-[#F92672] hover:text-white border-[#F92672]'>CONTACT ME</button></a>
 			</div>
 		</header>
 	);

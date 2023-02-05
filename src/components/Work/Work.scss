@@ -5,7 +5,7 @@
 
 @layer components {
 	.work {
-		@apply min-h-screen max-w-[1000px] mx-auto flex items-center justify-center pb-20 py-[50px] desktop-lg:px-[30px];
+		@apply min-h-screen max-w-[1000px] mx-auto flex items-center justify-center pb-20 py-[150px] desktop-lg:px-[30px];
 
 		.container {
 			h2 {
