@@ -89,7 +89,7 @@ const ToolsIcon = () => {
 
 const AboutSection = () => {
 	return (
-			<div className = "w-full h-[600px] bg-none">
+			<div className = "w-full bg-none">
 	
 				<div className="inner bg-none">
 					<div className="about_text bg-none">
@@ -140,8 +140,8 @@ const AboutSection = () => {
 const Skills = () => {
 	return (
 	  <div className="w-full bg-none">
-		<div className="grid grid-cols-3 gap-4 justify-center items-center bg-none">
-		  <div className="bg-none border-r border-gray-200">
+		<div className="grid grid-cols-3 mobile-lg:grid-cols-2 mobile-lg:grid-rows-2 mobile-lg justify-center items-center bg-none">
+		  <div className="bg-none">
 		  <div className="flex justify-center mb-5 bg-none"><BackendIcon/></div>
 		  	<h1 className="flex justify-center text-[30px] font-bold mb-10 bg-none text-[#F92672]"> Backend </h1>
 			<p className="text-center text-[23px] mb-2 bg-none">Django</p>
@@ -149,7 +149,7 @@ const Skills = () => {
 			<p className="text-center text-[23px] mb-2 bg-none">FastAPI</p>
 			<p className="text-center text-[23px] bg-none">Heroku</p>
 		  </div>
-		  <div className="bg-none border-r border-gray-200">
+		  <div className="bg-none">
 			<div className="flex justify-center mb-5 bg-none"><FrontendIcon/></div>
 			<h1 className="flex justify-center text-[30px] font-bold mb-10 bg-none text-[#F92672]"> Frontend </h1>
 			<p className="text-center text-[23px] mb-2 bg-none">React</p>
@@ -157,7 +157,7 @@ const Skills = () => {
 			<p className="text-center text-[23px] mb-2 bg-none">JavaScript</p>
 			<p className="text-center text-[23px] bg-none">TailwindCSS</p>
 		  </div>
-		  <div className="bg-none">
+		  <div className="bg-none mobile-lg:col-span-2 mobile-lg:mt-8">
 		  <div className="flex justify-center mb-5 bg-none"><ToolsIcon/></div>
 		  	<h1 className="flex justify-center text-[30px] font-bold mb-10 bg-none text-[#F92672]"> Tools </h1>
 			<p className="text-center text-[23px] mb-2 bg-none">Git</p>
@@ -189,7 +189,7 @@ function SelectionMenu() {
 		<div className="flex">
 		  <button
 			id="about"
-			className={`flex justify-center items-center py-4 text-white w-1/3 hover:bg-[#F92672] hover:bg-opacity-70 transition duration-300 ${
+			className={`flex justify-center items-center py-4 text-white w-1/2 hover:bg-[#F92672] hover:bg-opacity-70 transition duration-300 ${
 			  selected === 'about' ? 'bg-[#F92672] text-white' : 'bg-gray-700'
 			}`}
 			onClick={handleClick}
@@ -198,14 +198,14 @@ function SelectionMenu() {
 		  </button>
 		  <button
 			id="skills"
-			className={`flex justify-center items-center px-4 py-3 text-white w-1/3 hover:bg-[#F92672] hover:bg-opacity-70 transition duration-300 ${
+			className={`flex justify-center items-center px-4 py-3 text-white w-1/2 hover:bg-[#F92672] hover:bg-opacity-70 transition duration-300 ${
 				selected === 'skills' ? 'bg-[#F92672] text-white' : 'bg-gray-700'
 			  }`}
 			onClick={handleClick}
 		  >
 			SKILLS
 		  </button>
-		  <button
+		  {/* <button
 			id="experience"
 			className={`flex justify-center items-center px-4 py-3 text-white w-1/3 hover:bg-[#F92672] hover:bg-opacity-70 transition duration-300 ${
 				selected === 'experience' ? 'bg-[#F92672] text-white' : 'bg-gray-700'
@@ -213,12 +213,12 @@ function SelectionMenu() {
 			onClick={handleClick}
 		  >
 			EXPERIENCE
-		  </button>
+		  </button> */}
 		</div>
-		<div className="py-4 mt-[100px] bg-none">
+		<div className="mt-[100px] bg-none">
 		  {selected === 'about' && <AboutSection/>}
 		  {selected === 'skills' && <Skills/>}
-		  {selected === 'experience' && <p>Experience content goes here</p>}
+		  {/* {selected === 'experience' && <p>Experience content goes here</p>} */}
 		</div>
 	</div>
 	</div>
@@ -228,9 +228,9 @@ function SelectionMenu() {
 
 const About = () => {
 	return (
-		<section className="about flex-col items-center max-w-[1000px] mx-auto">
-			<div className="about_container" data-aos="fade-up" data-aos-duration="700">
-				<h2>About Me</h2>
+		<section className="about mobile-lg:mb-[150px] items-center h-screen justify-center max-w-[1000px] mx-auto top-0" id="about">
+			<div className="about_container flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="700">
+				<h2 id="about">About Me</h2>
 				<SelectionMenu/>
 			</div>
 		</section>

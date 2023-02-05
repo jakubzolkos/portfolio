@@ -5,7 +5,7 @@
 
 @layer components {
 	.navbar {
-		@apply fixed top-0 w-full h-[100px] px-[50px] flex items-center justify-between mobile-lg:px-[30px];
+		@apply fixed top-0 w-full h-[100px] px-[50px] flex items-center justify-between tablet-sm:px-[30px];
 
 		transition: $delay;
 
@@ -26,7 +26,7 @@
 		}
 
 		.right {
-			@apply flex items-center mobile-lg:hidden;
+			@apply flex items-center tablet-sm:hidden;
 
 			ul {
 				@apply bg-none flex justify-between items-center;
@@ -57,11 +57,13 @@
 
 			.resume {
 				a {
-					@apply text-[13px] py-[0.7rem] px-4 ml-[15px] border rounded;
+					@apply text-[13px] py-[0.2rem] px-4 ml-[15px] border rounded;
 
 					color: $monokai;
 					border-color: $monokai;
-					font-family: "SFMono";
+					font-family: "Mukta";
+					font-size: large;
+					font-weight: 400;
 					transition: $delay;
 
 					&:hover {
@@ -72,7 +74,7 @@
 		}
 
 		.mobile-nav {
-			@apply hidden mobile-lg:block;
+			@apply hidden tablet-sm:block;
 		}
 
 		&.active {
@@ -105,6 +107,7 @@
 					color: $light-slate2;
 					font-family: "Mukta";
 					transition: $delay;
+					font-size: x-large;
 
 					span {
 						@apply block font-medium tracking-wide text-[14px];
@@ -128,7 +131,7 @@
 
 				color: $monokai;
 				border-color: $monokai;
-				font-family: "SFMono";
+				font-family: "Mukta";
 				transition: $delay;
 
 				&:hover {

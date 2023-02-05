@@ -5,10 +5,10 @@
 
 @layer components {
 	.about {
-		@apply bg-none items-center justify-center mx-auto desktop-lg:px-[30px];
+		@apply bg-none items-center justify-center py-[150px] mx-auto desktop-lg:px-[30px];
 
 		.about_container {
-			@apply bg-none;
+			@apply bg-none h-[700px];
 
 			h2 {
 				@apply bg-none flex items-center justify-center relative mb-[80px] whitespace-nowrap w-full font-semibold text-[38px] leading-[35px] mobile-lg:text-[26px] mobile-lg:leading-[29px];

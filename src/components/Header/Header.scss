@@ -39,7 +39,7 @@
 
 		.button {
 			button {
-				@apply rounded-sm mt-[20px] border py-4 px-5 text-[15px] leading-[18px];
+				@apply rounded-sm mt-[20px] border py-4 px-5 text-[15px] leading-[18px] mobile-lg:py-3.5 mobile-lg:px-3;
 
 				font-family: "Mukta";
 				transition: $delay;

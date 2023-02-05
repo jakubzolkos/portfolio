@@ -59,7 +59,7 @@ const PopUp = () => {
 
 const Work = () => {
 	return (
-		<section className="work scroll-mt-10 mt-20" id="work">
+		<section className="work" id="work">
 			<div className="container">
 				<h2 data-aos="fade-up" data-aos-duration="700">
 					Personal Projects
@@ -86,11 +86,11 @@ const Work = () => {
 										a little to many drinks, solely based on the voice in the uploaded recording. 
 									</p>
 									<div className="odd_links flex justify-end bg-none">
-									<a href="" target="_blank" className="text-white bg-[#F92672] border-[#F92672]">
+									<a href="" target="_blank" className="text-[#F92672] hover:text-white border-[#F92672]">
 										DEMO
 										<ExternalIcon/>
 									</a>
-									<a href="" target="_blank" className="ml-3 text-white">
+									<a href="" target="_blank" className="ml-3 hover:border-[#F92672] text-white">
 										CODE
 										<GithubIcon />
 									</a>
@@ -132,11 +132,11 @@ const Work = () => {
 										A custom product API for a dropshipping store created with Django REST framework.
 									</p>
 									<div className="flex bg-none">
-									<a href="" target="_blank" className="text-white bg-[#F92672] border-[#F92672]">
+									<a href="" target="_blank" className="text-[#F92672] hover:text-white border-[#F92672]">
 										DEMO
 										<ExternalIcon/>
 									</a>
-									<a href="" target="_blank" className="ml-3 text-white">
+									<a href="" target="_blank" className="ml-3 hover:border-[#F92672] text-white">
 										CODE
 										<GithubIcon />
 									</a>
@@ -180,11 +180,11 @@ const Work = () => {
 										The first iteration of my personal portfolio. Inspired by Brittany Chiang's work. 
 									</p>
 									<div className="odd_links flex justify-end bg-none">
-									<a href="" target="_blank" className="text-white bg-[#F92672] border-[#F92672]">
+									<a href="" target="_blank" className="text-[#F92672] hover:text-white border-[#F92672]">
 										DEMO
 										<ExternalIcon/>
 									</a>
-									<a href="https://github.com/jakubzolkos/portfolio" target="_blank" className="ml-3 text-white">
+									<a href="https://github.com/jakubzolkos/portfolio" target="_blank" className="ml-3 hover:border-[#F92672] text-white">
 										CODE
 										<GithubIcon />
 									</a>
@@ -203,6 +203,53 @@ const Work = () => {
 							<a href="" target="_blank">
 								<div className="img">
 									<img src="/images/project_portfolio.png" alt="" />
+								</div>
+							</a>
+						</div>
+					</li>	
+
+				<li
+						className="work-item"
+						data-aos="fade-up"
+						data-aos-duration="700"
+					>
+						<div className="project_content bg-none">
+							<div className="bg-none">
+
+								<h3 className="project_title bg-none">
+									<a href="" target="_blank" className="bg-none">
+										Recog
+									</a>
+								</h3>
+								<div className="project_desc bg-[#16171d] bg-opacity-80 bg-none">
+									<p className="bg-none">
+										An Android application using a camera to detect objects and utilizing text-to-speech to utter their name
+										and position on the screen.
+									</p>
+									<div className="odd_links flex justify-start bg-none">
+									<a href="" target="_blank" className="text-[#F92672] hover:text-white border-[#F92672]">
+										DEMO
+										<ExternalIcon/>
+									</a>
+									<a href="https://github.com/jakubzolkos/recog" target="_blank" className="ml-3 hover:border-[#F92672] text-white">
+										CODE
+										<GithubIcon />
+									</a>
+									</div>
+								</div>
+								<ul className="project_techs bg-none">
+									<li>Flask</li>
+									<li>Kotlin</li>
+									<li>Google Vision API</li>
+						
+								</ul>
+							
+							</div>
+						</div>
+						<div className="project_image">
+							<a href="" target="_blank">
+								<div className="img">
+									<img src="/images/recog.png" alt="" />
 								</div>
 							</a>
 						</div>

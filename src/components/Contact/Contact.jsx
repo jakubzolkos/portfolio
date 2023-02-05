@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState} from 'react';
 import "./Contact.scss";
 import emailjs from '@emailjs/browser';
 
@@ -21,14 +21,27 @@ function Map() {
 const Contact = () => {
 
 	const form = useRef();
+
+	const [formStatus, setFormStatus] = useState(null);
+
+  	const handleSubmit = (event) => {
+		event.preventDefault();
+		// perform form submit logic here, and if it's successful, set formStatus to 'success'
+		setFormStatus('success');
+  	};
   
-	const sendEmail = (e) => {
-	  e.preventDefault();
+	const sendEmail = (event) => {
+	  event.preventDefault();
   
 	  emailjs.sendForm('service_6x8ppcj', 'template_zkz7b58', form.current, 'wAMDh5fmR68KRQ9o5')
 		.then((result) => {
 			console.log(result.text);
-			e.target.reset();
+			form.current.reset();
+			setFormStatus('success');
+			setTimeout(() => {
+				setFormStatus(null);
+				document.getElementById("form-status").style.opacity = 0;
+			}, 3000);
 		}, (error) => {
 			console.log(error.text);
 		});
@@ -47,13 +60,13 @@ const Contact = () => {
 
 					</div>
 						<div name = 'contact' className = 'bg-none max-w-[800px] mx-auto border-gray-300'>	
-						<form ref = {form} onSubmit = {sendEmail} className = 'max-h-[500px] w-full rounded-lg bg-opacity-60 px-5 py-5 bg-none bg-[#16171d]'>		
+						<form ref = {form} onSubmit={e => { handleSubmit(e); sendEmail(e); }} className = 'max-h-[520px] w-full rounded-lg bg-opacity-60 px-5 py-5 bg-none bg-[#16171d]'>		
 							<div className = 'pb-8 bg-none'>
             				<div className='bg-opacity-60 mt-7 grid mobile-lg:flex-col mobile-lg:grid-cols-1 grid-cols-2 gap-6 bg-none'>
-								<input className = 'bg-opacity-60 text-xl bg-none outline-none text-gray-300 inline border-b-2 px-2 py-2 mobile-lg:mb-2' type = 'text' placeholder = 'Name' name = 'user_name'/>
-             					<input className = 'bg-opacity-60 text-xl bg-none items-stretch outline-none text-gray-300 inline border-b-2 px-2 py-2' type = 'text' placeholder = 'Phone (Optional)' name = 'user_phone'/>
+								<input className = 'bg-opacity-60 text-xl bg-none outline-none text-gray-300 inline border-b-2 px-2 py-2' type = 'text' placeholder = 'Name' name = 'user_name'/>
+             					<input className = 'bg-opacity-60 text-xl bg-none outline-none text-gray-300 inline border-b-2 px-2 py-2' type = 'text' placeholder = 'Phone (Optional)' name = 'user_phone'/>
 							</div>
-							<input required className = 'bg-opacity-60 w-full text-xl bg-none outline-none text-gray-300 inline border-b-2 my-4 py-2 px-2' type = 'email' placeholder = 'Email' name = 'user_email'/>
+							<input required className = 'bg-opacity-60 w-full text-xl bg-none outline-none text-gray-300 inline border-b-2 my-5 py-2 px-2' type = 'email' placeholder = 'Email' name = 'user_email'/>
 							<textarea required className = 'bg-opacity-70 w-full text-xl max-h-[200px] bg-none outline-none text-gray-300 inline border-b-2  p-2' name = 'message' rows="50" placeholder = 'Message'></textarea>
 						
 							<div className="flex bg-none justify-center">
@@ -62,6 +75,11 @@ const Contact = () => {
 							
 							</div>
        				    </form>
+						   {formStatus === 'success' && (
+							<div data-aos="zoom-in" data-aos-duration="400" className="bg-green-500 py-4 mobile-lg:mb-10 mobile-lg:py-2 mobile-lg:mt-12 bg-none text-white text-center text-lg">
+								Message sent successfully!
+							</div>
+							)}
     				</div>
 				</div>
 				
