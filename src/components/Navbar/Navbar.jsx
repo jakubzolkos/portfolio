@@ -2,6 +2,7 @@ import React from "react";
 import useScroll from "../../hooks/useScroll";
 import "./Navbar.scss";
 import resume from "../../assets/jakub_zolkos_resume.pdf"
+import logo from "../../../public/svg/logo.svg"
 
 const Navbar = () => {
 	const { scrollY, scrollDirection } = useScroll();
@@ -24,7 +25,7 @@ const Navbar = () => {
 					data-aos="zoom-in"
 					data-aos-duration="700"
 				>
-					<a href="#header"><img className = "bg-none" src={"../../logo.svg"} alt=""/></a>
+					<a href="#header"><img className = "bg-none" src={logo} alt=""/></a>
 				</div>
 
 				<div className="right bg-none">

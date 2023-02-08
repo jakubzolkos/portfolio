@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./Work.scss";
+import ecommerce_demo from "../../../public/demos/ecommerce_demo.mp4";
 
 const ExternalIcon = () => {
 	return (
@@ -127,7 +128,7 @@ const Work = () => {
 								</h3>
 								<div className="project_desc bg-[#16171d] bg-opacity-80 bg-none">
 									<p className="bg-none">
-										<p className='font-bold'>PROJECT IN PROGRESS. STAY TUNED!</p> <br></br>Partying on a Friday night? DrunkAPI is a web app where artifficial intelligence checks whether you are sober or had
+										<p className='font-bold bg-none'>PROJECT IN PROGRESS. STAY TUNED!</p> <br></br>Partying on a Friday night? DrunkAPI is a web app where artifficial intelligence checks whether you are sober or had
 										a little to many drinks, solely based on the voice in the uploaded recording. 
 									</p>
 									<div className="odd_links flex justify-end bg-none">
@@ -303,7 +304,7 @@ const Work = () => {
 						</div>
 					</li>		
 					
-					<Modal show={showModal1} close={handleClosePopup1} videoId={"../..//public/demos/ecommerce_demo.mp4"} />
+					<Modal show={showModal1} close={handleClosePopup1} videoId={ecommerce_demo} />
 					<Modal show={showModal2} close={handleClosePopup2} videoId={"https://www.youtube.com/embed/xvoobCyBV2U"} />	
 					
 				</ul>
