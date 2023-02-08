@@ -132,7 +132,7 @@ const Work = () => {
 									</p>
 									<div className="odd_links flex justify-end bg-none">
 								
-									<a href="https://github.com/jakubzolkos/sobriety-voice-detection" target="_blank" className="ml-3 hover:border-[#F92672] text-white">
+									<a href="https://github.com/jakubzolkos/sobriety-voice-detection" target="_blank" className="hover:border-[#F92672] text-white">
 										CODE
 										<GithubIcon />
 									</a>
