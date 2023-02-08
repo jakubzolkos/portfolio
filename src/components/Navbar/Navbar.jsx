@@ -31,7 +31,7 @@ const Navbar = () => {
 					data-aos="zoom-in"
 					data-aos-duration="700"
 				>
-					<a href="#header"><img className = "bg-none" src={Logo} alt=""/></a>
+					<a href="#header"><img className = "bg-none"alt=""/><Logo/></a>
 				</div>
 
 				<div className="right bg-none">
