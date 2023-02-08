@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./Work.scss";
+import ecommerce_demo from "../..//public/demos/ecommerce_demo.mp4";
 
 const ExternalIcon = () => {
 	return (
@@ -303,7 +304,7 @@ const Work = () => {
 						</div>
 					</li>		
 					
-					<Modal show={showModal1} close={handleClosePopup1} videoId={"../..//public/demos/ecommerce_demo.mp4"} />
+					<Modal show={showModal1} close={handleClosePopup1} videoId={ecommerce_demo} />
 					<Modal show={showModal2} close={handleClosePopup2} videoId={"https://www.youtube.com/embed/xvoobCyBV2U"} />	
 					
 				</ul>
