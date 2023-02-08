@@ -6,7 +6,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite --port 1337",
-		"build": "vite build",
+		"build": "npm run build",
 		"preview": "vite preview"
 	},
 	"dependencies": {
