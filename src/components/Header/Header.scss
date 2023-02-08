@@ -10,7 +10,7 @@
 		h5 {
 			@apply text-[20px] mb-[15px] ml-[4px] mobile-lg:mb-[20px];
 
-			color: $monokai;
+			color: $light-slate2;
 			background: none;
 			font-family: "Mukta";
 		}
@@ -18,7 +18,7 @@
 		h1 {
 			@apply text-[80px] text-center font-extrabold leading-[90px] mobile-lg:text-[40px] mobile-lg:leading-[44px];
 
-			color: $light-slate2;
+			color: $monokai;
 			background: none;
 
 			&:nth-child(3) {
@@ -32,9 +32,7 @@
 			@apply text-center my-[20px] max-w-[540px] text-[20px] leading-[26px] mobile-lg:text-[18px] mobile-lg:leading-[23px];
 
 			background: none;
-			span {
-				color: $green;
-			}
+			color: $light-slate2
 		}
 
 		.button {

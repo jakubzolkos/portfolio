@@ -8,17 +8,17 @@ const Header = () => {
 				Hello there! My name is
 			</h5>
 			<h1 data-aos="fade-up" data-aos-delay="900" data-aos-duration="700">
-				Jakub Zolkos
+				JAKUB ZOLKOS
 			</h1>
-			<h1
+			{/* <h1
 				data-aos="fade-up"
 				data-aos-delay="1000"
 				data-aos-duration="700"
 			>
-				BACKEND DEVELOPER
-			</h1>
+				JAKUB ZOLKOS
+			</h1> */}
 			<p data-aos="fade-up" data-aos-delay="1100" data-aos-duration="700">
-				I'm a dedicated and passionate backend and AI developer with a sense of creative design.
+				I'm a computer engineering student specializing in backend development and data analysis. 
 			</p>
 			<div
 				className="button flex bg-none"
