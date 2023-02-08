@@ -42,6 +42,7 @@
 				font-family: "Mukta";
 				transition: $delay;
 				font-size: larger;
+				background-color: $monokai;
 
 				&:hover {
 					background: rgba($monokai, 0.3);
