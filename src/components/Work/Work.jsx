@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import "./Work.scss";
 
 const ExternalIcon = () => {
@@ -41,23 +41,68 @@ const GithubIcon = () => {
 	);
 };
 
-const PopUp = () => {
+const Modal = ({ show, close, videoId }) => {
 	return (
-		<div>
-		  <button onClick={() => this.setState({ showVideo: true })}>
-			Show Video
+	  <div className={`modal ${show ? 'block' : 'hidden'}`}>
+		<div className="modal-content" style={{
+			width: '80vw',
+			height: '80vh',
+			maxWidth: '800px',
+			maxHeight: '500px',
+			margin: '0 auto',
+			top: '50%',
+			left: '50%',
+			transform: 'translate(-50%, -50%)',
+			position: 'fixed',
+			zIndex: 999
+		}}>
+		  <button className="modal-close" onClick={close} style={{ position: 'absolute', top: '0', right: '0' }}>
+		  <svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="48"
+			height="48"
+			viewBox="0 0 24 24"
+			fill="#F92672"
+		>
+			<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+		</svg>
 		  </button>
-		  {this.state.showVideo ? (
-			<div className="fixed top-0 left-0 w-full h-full bg-black">
-			  <video src={videoUrl} />
-			</div>
-		  ) : null}
+		  <iframe
+			width="100%"
+			height="100%"
+			src={videoId}
+			frameBorder="0"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+			allowFullScreen
+		  />
 		</div>
-	  );
-}
+	  </div>
+	);
+  };
 
-
+  
 const Work = () => {
+
+	const [showModal1, setShowModal1] = useState(false);
+	const [showModal2, setShowModal2] = useState(false);
+
+	const handleOpenPopup1 = () => {
+	  setShowModal1(true);
+	};
+  
+	const handleClosePopup1 = () => {
+	  setShowModal1(false);
+	};
+
+	const handleOpenPopup2 = () => {
+	  setShowModal2(true);
+	};
+  
+	const handleClosePopup2 = () => {
+	  setShowModal2(false);
+	};
+  
+	
 	return (
 		<section className="work" id="work">
 			<div className="container">
@@ -82,15 +127,12 @@ const Work = () => {
 								</h3>
 								<div className="project_desc bg-[#16171d] bg-opacity-80 bg-none">
 									<p className="bg-none">
-										Partying on a Friday night? DrunkAPI is a web app where artifficial intelligence checks whether you are sober or had
+										<p className='font-bold'>PROJECT IN PROGRESS. STAY TUNED!</p> <br></br>Partying on a Friday night? DrunkAPI is a web app where artifficial intelligence checks whether you are sober or had
 										a little to many drinks, solely based on the voice in the uploaded recording. 
 									</p>
 									<div className="odd_links flex justify-end bg-none">
-									<a href="" target="_blank" className="text-[#F92672] hover:text-white border-[#F92672]">
-										DEMO
-										<ExternalIcon/>
-									</a>
-									<a href="" target="_blank" className="ml-3 hover:border-[#F92672] text-white">
+								
+									<a href="https://github.com/jakubzolkos/sobriety-voice-detection" target="_blank" className="ml-3 hover:border-[#F92672] text-white">
 										CODE
 										<GithubIcon />
 									</a>
@@ -129,14 +171,16 @@ const Work = () => {
 								</h3>
 								<div className="project_desc bg-[#16171d] bg-opacity-80 bg-none">
 									<p className="bg-none">
-										A custom product API for a dropshipping store created with Django REST framework.
+										A product API for an e-commerce store created with Django Rest Framework. Supports products search based on category, product ID and custom queries.
 									</p>
 									<div className="flex bg-none">
-									<a href="" target="_blank" className="text-[#F92672] hover:text-white border-[#F92672]">
-										DEMO
-										<ExternalIcon/>
+									<a onClick={handleOpenPopup1} className="text-[#F92672] hover:text-white border-[#F92672]">
+										<button className='flex'>
+											DEMO
+											<ExternalIcon/>
+										</button>
 									</a>
-									<a href="" target="_blank" className="ml-3 hover:border-[#F92672] text-white">
+									<a href="https://github.com/jakubzolkos/ecommerce-api" target="_blank" className="ml-3 hover:border-[#F92672] text-white">
 										CODE
 										<GithubIcon />
 									</a>
@@ -144,9 +188,9 @@ const Work = () => {
 								</div>
 								<ul className="project_techs bg-none">
 									<li>Django</li>
-									<li>JavaScript</li>
-									<li>CSS</li>
-									<li>HTML</li>
+									<li>PostgreSQL</li>
+									<li>Elastisearch</li>
+									<li>Docker</li>
 						
 								</ul>
 							
@@ -155,13 +199,11 @@ const Work = () => {
 						<div className="project_image">
 							<a href="" target="_blank">
 								<div className="img">
-									<img src="/images/work1.png" alt="" />
+									<img src="/images/ecommerce.png" alt="" />
 								</div>
 							</a>
 						</div>
 					</li>
-
-
 					<li
 						className="work-item"
 						data-aos="fade-up"
@@ -179,10 +221,12 @@ const Work = () => {
 									<p className="bg-none">
 										The first iteration of my personal portfolio. Inspired by Brittany Chiang's work. 
 									</p>
-									<div className="odd_links flex justify-end bg-none">
+									<div className="flex justify-end bg-none">
 									<a href="" target="_blank" className="text-[#F92672] hover:text-white border-[#F92672]">
-										DEMO
-										<ExternalIcon/>
+										<button className='flex'>
+											DEMO
+											<ExternalIcon/>
+										</button>
 									</a>
 									<a href="https://github.com/jakubzolkos/portfolio" target="_blank" className="ml-3 hover:border-[#F92672] text-white">
 										CODE
@@ -193,8 +237,6 @@ const Work = () => {
 								<ul className="project_techs bg-none">
 									<li>React</li>
 									<li>TailwindCSS</li>
-									<li>HTML</li>
-						
 								</ul>
 							
 							</div>
@@ -227,10 +269,13 @@ const Work = () => {
 										and position on the screen.
 									</p>
 									<div className="odd_links flex justify-start bg-none">
-									<a href="" target="_blank" className="text-[#F92672] hover:text-white border-[#F92672]">
-										DEMO
-										<ExternalIcon/>
+									<a onClick={handleOpenPopup2} className="text-[#F92672] hover:text-white border-[#F92672]">
+										<button className='flex'>
+											DEMO
+											<ExternalIcon/>
+										</button>
 									</a>
+									
 									<a href="https://github.com/jakubzolkos/recog" target="_blank" className="ml-3 hover:border-[#F92672] text-white">
 										CODE
 										<GithubIcon />
@@ -243,9 +288,12 @@ const Work = () => {
 									<li>Google Vision API</li>
 						
 								</ul>
+								
 							
 							</div>
+							
 						</div>
+						
 						<div className="project_image">
 							<a href="" target="_blank">
 								<div className="img">
@@ -254,6 +302,10 @@ const Work = () => {
 							</a>
 						</div>
 					</li>		
+					
+					<Modal show={showModal1} close={handleClosePopup1} videoId={"../..//public/demos/ecommerce_demo.mp4"} />
+					<Modal show={showModal2} close={handleClosePopup2} videoId={"https://www.youtube.com/embed/xvoobCyBV2U"} />	
+					
 				</ul>
 			</div>
 		</section>
