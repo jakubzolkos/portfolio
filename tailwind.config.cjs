@@ -42,4 +42,6 @@ module.exports = {
 		}
 	},
 	plugins: [],
+	alignItems: ['responsive', 'important'],
+	width: ['responsive', 'before', 'after', 'important']
 }
