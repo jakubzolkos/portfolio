@@ -116,7 +116,7 @@ const AboutSection = () => {
 							
 							</p>
 							<a className = "bg-none desktop-md:flex desktop-md:justify-center" href={resume} target="_blank" without rel="noopener noreferrer">
-								<button className = 'text-white border-[#F92672] flex justify-center items-center'>
+								<button className = 'text-[#F92672] border-[#F92672] hover:text-white flex justify-center items-center'>
 									DOWNLOAD RESUME
 									<DownloadIcon/>
 								</button>

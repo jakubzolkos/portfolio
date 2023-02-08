@@ -132,7 +132,7 @@ const Work = () => {
 									</p>
 									<div className="odd_links flex justify-end bg-none">
 								
-									<a href="https://github.com/jakubzolkos/sobriety-voice-detection" target="_blank" className="ml-3 hover:border-[#F92672] text-white">
+									<a href="https://github.com/jakubzolkos/sobriety-voice-detection" target="_blank" className="hover:border-[#F92672] text-white">
 										CODE
 										<GithubIcon />
 									</a>
@@ -221,7 +221,7 @@ const Work = () => {
 									<p className="bg-none">
 										The first iteration of my personal portfolio. Inspired by Brittany Chiang's work. 
 									</p>
-									<div className="flex justify-end bg-none">
+									<div className="odd_links flex justify-end bg-none">
 									<a href="" target="_blank" className="text-[#F92672] hover:text-white border-[#F92672]">
 										<button className='flex'>
 											DEMO
