@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Work.scss";
-import ecommerce_demo from "../..//public/demos/ecommerce_demo.mp4";
+import ecommerce_demo from "../../../public/demos/ecommerce_demo.mp4";
 
 const ExternalIcon = () => {
 	return (
