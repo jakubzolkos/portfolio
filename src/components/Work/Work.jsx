@@ -112,51 +112,6 @@ const Work = () => {
 				</h2>
 
 				<ul className="inner">
-
-				<li
-						className="work-item"
-						data-aos="fade-up"
-						data-aos-duration="700"
-					>
-						<div className="project_content bg-none">
-							<div className="bg-none">
-
-								<h3 className="project_title bg-none">
-									<a href="" target="_blank" className="bg-none">
-										DrunkAPI
-									</a>
-								</h3>
-								<div className="project_desc bg-[#16171d] bg-opacity-80 bg-none">
-									<p className="bg-none">
-										<p className='font-bold bg-none'>PROJECT IN PROGRESS. STAY TUNED!</p> <br></br>Partying on a Friday night? DrunkAPI is a web app where artifficial intelligence checks whether you are sober or had
-										a little to many drinks, solely based on the voice in the uploaded recording. 
-									</p>
-									<div className="odd_links flex justify-end bg-none">
-								
-									<a href="https://github.com/jakubzolkos/sobriety-voice-detection" target="_blank" className="hover:border-[#F92672] text-white">
-										CODE
-										<GithubIcon />
-									</a>
-									</div>
-								</div>
-								<ul className="project_techs bg-none">
-									<li>FastAPI</li>
-									<li>React</li>
-									<li>TensorFlow</li>
-									<li>PostgreSQL</li>
-								</ul>
-							
-							</div>
-						</div>
-						<div className="project_image">
-							<a href="" target="_blank">
-								<div className="img">
-									<img src="/images/work1.png" alt="" />
-								</div>
-							</a>
-						</div>
-					</li>
-
 					<li
 						className="work-item"
 						data-aos="fade-up"
@@ -174,7 +129,7 @@ const Work = () => {
 									<p className="bg-none">
 										A product API for an e-commerce store created with Django Rest Framework. Supports products search based on category, product ID and custom queries.
 									</p>
-									<div className="flex bg-none">
+									<div className="odd_links justify-end flex bg-none">
 									<a onClick={handleOpenPopup1} className="text-[#F92672] hover:text-white border-[#F92672]">
 										<button className='flex'>
 											DEMO
@@ -198,7 +153,7 @@ const Work = () => {
 							</div>
 						</div>
 						<div className="project_image">
-							<a href="" target="_blank">
+							<a href="https://github.com/jakubzolkos/ecommerce-api" target="_blank">
 								<div className="img">
 									<img src="/images/ecommerce.png" alt="" />
 								</div>
@@ -222,7 +177,7 @@ const Work = () => {
 									<p className="bg-none">
 										The first iteration of my personal portfolio. Inspired by Brittany Chiang's work. 
 									</p>
-									<div className="odd_links flex justify-end bg-none">
+									<div className="flex bg-none">
 									<a href="" target="_blank" className="text-[#F92672] hover:text-white border-[#F92672]">
 										<button className='flex'>
 											DEMO
@@ -243,7 +198,7 @@ const Work = () => {
 							</div>
 						</div>
 						<div className="project_image">
-							<a href="" target="_blank">
+							<a href="https://github.com/jakubzolkos/portfolio" target="_blank">
 								<div className="img">
 									<img src="/images/project_portfolio.png" alt="" />
 								</div>
@@ -269,7 +224,7 @@ const Work = () => {
 										An Android application using a camera to detect objects and utilizing text-to-speech to utter their name
 										and position on the screen.
 									</p>
-									<div className="odd_links flex justify-start bg-none">
+									<div className="odd_links flex justify-end bg-none">
 									<a onClick={handleOpenPopup2} className="text-[#F92672] hover:text-white border-[#F92672]">
 										<button className='flex'>
 											DEMO
@@ -296,14 +251,57 @@ const Work = () => {
 						</div>
 						
 						<div className="project_image">
-							<a href="" target="_blank">
+							<a href="https://github.com/jakubzolkos/recog" target="_blank">
 								<div className="img">
 									<img src="/images/recog.png" alt="" />
 								</div>
 							</a>
 						</div>
-					</li>		
-					
+					</li>
+
+					<li
+						className="work-item"
+						data-aos="fade-up"
+						data-aos-duration="700"
+					>
+						<div className="project_content bg-none">
+							<div className="bg-none">
+
+								<h3 className="project_title bg-none">
+									<a href="" target="_blank" className="bg-none">
+										DrunkAPI
+									</a>
+								</h3>
+								<div className="project_desc bg-[#16171d] bg-opacity-80 bg-none">
+									<p className="bg-none">
+										<p className='font-bold bg-none'>PROJECT IN PROGRESS. STAY TUNED!</p> <br></br>Partying on a Friday night? DrunkAPI is a web app where artifficial intelligence checks whether you are sober or had
+										a little to many drinks, solely based on the voice in the uploaded recording. 
+									</p>
+									<div className="flex bg-none">
+								
+									<a href="https://github.com/jakubzolkos/sobriety-voice-detection" target="_blank" className="hover:border-[#F92672] text-white">
+										CODE
+										<GithubIcon />
+									</a>
+									</div>
+								</div>
+								<ul className="project_techs bg-none">
+									<li>FastAPI</li>
+									<li>React</li>
+									<li>TensorFlow</li>
+									<li>PostgreSQL</li>
+								</ul>
+							
+							</div>
+						</div>
+						<div className="project_image">
+							<a href="https://github.com/jakubzolkos/sobriety-voice-detection" target="_blank">
+								<div className="img">
+									<img src="/images/drunkapi.png" alt="" />
+								</div>
+							</a>
+						</div>
+					</li>
 					<Modal show={showModal1} close={handleClosePopup1} videoId={ecommerce_demo} />
 					<Modal show={showModal2} close={handleClosePopup2} videoId={"https://www.youtube.com/embed/xvoobCyBV2U"} />	
 					
