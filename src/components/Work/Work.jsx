@@ -127,7 +127,7 @@ const Work = () => {
 								</h3>
 								<div className="project_desc bg-[#16171d] bg-opacity-80 bg-none">
 									<p className="bg-none">
-										A product API for an e-commerce store created with Django Rest Framework. Supports products search based on category, product ID and custom queries.
+										A product API for an e-commerce store created with Django Rest Framework. Supports product search based on category, web ID and custom queries.
 									</p>
 									<div className="odd_links justify-end flex bg-none">
 									<a onClick={handleOpenPopup1} className="text-[#F92672] hover:text-white border-[#F92672]">
