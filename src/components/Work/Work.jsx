@@ -145,7 +145,7 @@ const Work = () => {
 								<ul className="project_techs bg-none">
 									<li>Django</li>
 									<li>PostgreSQL</li>
-									<li>Elastisearch</li>
+									<li>Elasticsearch</li>
 									<li>Docker</li>
 						
 								</ul>
