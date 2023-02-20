@@ -275,7 +275,7 @@ const Work = () => {
 								<div className="project_desc bg-[#16171d] bg-opacity-80 bg-none">
 									<p className="bg-none">
 										<p className='font-bold bg-none'>PROJECT IN PROGRESS. STAY TUNED!</p> <br></br>Partying on a Friday night? DrunkAPI is a web app where artifficial intelligence checks whether you are sober or had
-										a little to many drinks, solely based on the voice in the uploaded recording. 
+										a little too many drinks, solely based on the voice in the uploaded recording. 
 									</p>
 									<div className="flex bg-none">
 								
