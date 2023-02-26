@@ -106,7 +106,7 @@ const AboutSection = () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									Engineering Proudct Innovation Center
+									Engineering Product Innovation Center
 								</a>
 								, a manufacturing
 								facility of BU, where I am responsible for developing a web application for 
