@@ -259,7 +259,7 @@ const Work = () => {
 						</div>
 					</li>
 
-					{/* <li
+					<li
 						className="work-item"
 						data-aos="fade-up"
 						data-aos-duration="700"
@@ -301,7 +301,7 @@ const Work = () => {
 								</div>
 							</a>
 						</div>
-					</li> */}
+					</li>
 					<Modal show={showModal1} close={handleClosePopup1} videoId={ecommerce_demo} />
 					<Modal show={showModal2} close={handleClosePopup2} videoId={"https://www.youtube.com/embed/xvoobCyBV2U"} />	
 					
