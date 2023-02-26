@@ -55,8 +55,8 @@ const Contact = () => {
 						Contact
 					</h2>
 					<div className='bg-none'>
-					<p className="text-4xl bg-none justify-center flex text-center"> Let's stay in touch!</p>
-					<p className="text-2xl mb-4 bg-none justify-center flex text-center"> Submit the form below or send me an email at zolkos@bu.edu</p>
+					<p className="text-4xl bg-none justify-center flex text-center"> Let us stay in touch!</p>
+					<p className="text-2xl mb-4 bg-none justify-center flex text-center"> Please submit the form below or send me an email at zolkos@bu.edu</p>
 
 					</div>
 						<div name = 'contact' className = 'bg-none max-w-[800px] mx-auto border-gray-300'>	
