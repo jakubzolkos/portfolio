@@ -109,7 +109,7 @@ const AboutSection = () => {
 									Engineering Proudct Innovation Center
 								</a>
 								, a manufacturing
-								facility of BU, where I'm responsible for developing a professional web application for 
+								facility of BU, where I am responsible for developing a web application for 
 								authorizing entry to the machine shop and maintaining student databases. 			
 							</p>
 							<p>
@@ -146,8 +146,8 @@ const Skills = () => {
 		  	<h1 className="flex justify-center text-[30px] font-bold mb-10 bg-none text-[#F92672]"> Backend </h1>
 			<p className="text-center text-[23px] mb-2 bg-none">Django</p>
 			<p className="text-center text-[23px] mb-2 bg-none">Flask</p>
-			<p className="text-center text-[23px] mb-2 bg-none">FastAPI</p>
-			<p className="text-center text-[23px] bg-none">Docker</p>
+			<p className="text-center text-[23px] mb-2 bg-none">PostgreSQL</p>
+			<p className="text-center text-[23px] bg-none">Elasticsearch</p>
 		  </div>
 		  <div className="bg-none">
 			<div className="flex justify-center mb-5 bg-none"><FrontendIcon/></div>
@@ -162,7 +162,7 @@ const Skills = () => {
 		  	<h1 className="flex justify-center text-[30px] font-bold mb-10 bg-none text-[#F92672]"> Tools </h1>
 			<p className="text-center text-[23px] mb-2 bg-none">Git</p>
 			<p className="text-center text-[23px] mb-2 bg-none">Bash</p>
-			<p className="text-center text-[23px] mb-2 bg-none">Heroku</p>
+			<p className="text-center text-[23px] mb-2 bg-none">Docker</p>
 			<p className="text-center text-[23px] bg-none">LINUX/Unix</p>
 		  </div>
 		</div>

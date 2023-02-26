@@ -259,7 +259,7 @@ const Work = () => {
 						</div>
 					</li>
 
-					<li
+					{/* <li
 						className="work-item"
 						data-aos="fade-up"
 						data-aos-duration="700"
@@ -269,7 +269,7 @@ const Work = () => {
 
 								<h3 className="project_title bg-none">
 									<a href="" target="_blank" className="bg-none">
-										DrunkAPI
+										Sobriety API
 									</a>
 								</h3>
 								<div className="project_desc bg-[#16171d] bg-opacity-80 bg-none">
@@ -301,7 +301,7 @@ const Work = () => {
 								</div>
 							</a>
 						</div>
-					</li>
+					</li> */}
 					<Modal show={showModal1} close={handleClosePopup1} videoId={ecommerce_demo} />
 					<Modal show={showModal2} close={handleClosePopup2} videoId={"https://www.youtube.com/embed/xvoobCyBV2U"} />	
 					
